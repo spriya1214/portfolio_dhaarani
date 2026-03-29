@@ -369,10 +369,17 @@ function App() {
                       <Mail className="w-5 h-5" />
                       Send Email
                     </Button>
-                    <Button variant="outline" size="lg" className="gap-2" onClick={() => window.open('/Dhaarani.nambi_Resume.pdf', '_blank')}>
+                    <a 
+                href="/public/Dhaarani.nambi_Resume.pdf" 
+                download="Dhaarani.nambi_Resume.pdf"
+                className="inline-flex"
+              >
+                <Button variant="outline" size="lg" className="gap-2">
                       <Download className="w-5 h-5" />
                       Download Resume
                     </Button>
+              </a>
+                    
                   </div>
                 </div>
               </div>
