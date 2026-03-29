@@ -370,7 +370,7 @@ function App() {
                       Send Email
                     </Button>
                     <a 
-                href="/public/Dhaarani.nambi_Resume.pdf" 
+                href="/src/Dhaarani.nambi_Resume.pdf" 
                 download="Dhaarani.nambi_Resume.pdf"
                 className="inline-flex"
               >
