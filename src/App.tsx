@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import { Button } from './components/ui/button'
-import { Github, Linkedin, Mail, Phone, Briefcase, GraduationCap, Code, Cloud, Container, Cpu, Shield, Terminal } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, Briefcase, GraduationCap, Code, Cloud, Container, Cpu, Shield, Terminal, Download } from 'lucide-react'
 
 function App() {
   return (
@@ -44,11 +44,11 @@ function App() {
             Passionate about building CI/CD pipelines, automating infrastructure, and mastering cloud technologies.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="gap-2">
+            <Button size="lg" className="gap-2" onClick={() => window.open('mailto:Dhaarani.nambi011@gmail.com', '_blank')}>
               <Mail className="w-5 h-5" />
               Get In Touch
             </Button>
-            <Button variant="outline" size="lg" className="gap-2">
+            <Button variant="outline" size="lg" className="gap-2" onClick={() => window.open('https://github.com/Dhaarani011', '_blank')}>
               <Github className="w-5 h-5" />
               GitHub
             </Button>
@@ -129,17 +129,47 @@ function App() {
             <CardContent className="space-y-8">
               <div className="border-l-4 border-blue-600 pl-6">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Lambton College</h3>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">Apr 2023 - Aug 2023</span>
+                </div>
+                <div className="mb-4">
+                  <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200">Administrator Intern (Co-op)</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">4 months</p>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                  <li>Troubleshooted and addressed network issues, resulting in minimum user downtime and a 95% issue resolution rate within the first hour.</li>
+                  <li>Assisted with deploying and setting network software and hardware and successfully deploying all planned updates within the specified timeframes.</li>
+                  <li>Worked together with the IT team to streamline support operations, resulting in a 30% improvement in response times.</li>
+                  <li>Documented technical concerns and answers, helping to build a knowledge base that decreased recurrence issues by 40%.</li>
+                </ul>
+              </div>
+              <div className="border-l-4 border-blue-600 pl-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Amazon</h3>
                   <span className="text-sm text-gray-500 dark:text-gray-400">Sep 2020 - Nov 2021</span>
                 </div>
                 <div className="mb-4">
                   <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200">Cloud Support Engineer</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Permanent Full-time • 1 yr 3 mos</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Permanent Full-time • 1 yr 3 mos • India</p>
                 </div>
-                <div>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                  <li>Created automation scripts to streamline repetitive processes, resulting in a 25% reduction in manual workload.</li>
+                  <li>Worked with cross-functional teams to increase system robustness and resilience in hybrid cloud environments.</li>
+                  <li>Integrated cloud infrastructure deployment with Terraform and Ansible to ensure reliable and effective resource provisioning.</li>
+                  <li>Designed and implemented containerized applications with Docker and Kubernetes, allowing for scalability, high availability, and flawless workload management.</li>
+                  <li>Administered and optimized Linux-based systems, adopting resource utilization strategies to improve system performance and dependability.</li>
+                  <li>Actively contributed to creating internal knowledge base articles, sharing insights and best practices with the broader support team.</li>
+                </ul>
+                <div className="mt-6">
                   <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200">Data Associate</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Full-time • 1 yr 2 mos • Aug 2019 - Sep 2020</p>
-                  <p className="text-gray-600 dark:text-gray-400">Chennai, Tamil Nadu, India</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Full-time • 1 yr 2 mos • Aug 2019 - Sep 2020 • India</p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 mt-3">
+                    <li>Conducted in-depth analysis of the Goal Success rate for the device, utilizing statistical methods and data visualization tools, including Excel, to assess data capture quality.</li>
+                    <li>Implemented supervised machine learning algorithms to categorize extensive datasets, achieving a precision rate of 95% in data labeling.</li>
+                    <li>Conducted rigorous data quality analysis, employing Python scripts, SQL queries, and Excel, to identify and eliminate outliers, thereby enhancing model robustness.</li>
+                    <li>Spearheaded a manual annotation initiative, contributing to a 15% improvement in device accuracy, and processed over 10,000 data points.</li>
+                    <li>Introduced and implemented a data validation framework, reducing errors by 20% and ensuring the integrity of labeled training datasets.</li>
+                  </ul>
                 </div>
               </div>
             </CardContent>
@@ -334,10 +364,16 @@ function App() {
                     I'm always interested in hearing about new opportunities and exciting projects. 
                     Feel free to reach out if you'd like to collaborate!
                   </p>
-                  <Button size="lg" className="w-full sm:w-auto gap-2">
-                    <Mail className="w-5 h-5" />
-                    Send Email
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg" className="gap-2" onClick={() => window.open('mailto:Dhaarani.nambi011@gmail.com', '_blank')}>
+                      <Mail className="w-5 h-5" />
+                      Send Email
+                    </Button>
+                    <Button variant="outline" size="lg" className="gap-2" onClick={() => window.open('/src/Dhaarani.nambi_Resume.pdf', '_blank')}>
+                      <Download className="w-5 h-5" />
+                      Download Resume
+                    </Button>
+                  </div>
                 </div>
               </div>
             </CardContent>
